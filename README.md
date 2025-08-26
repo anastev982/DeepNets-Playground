@@ -1,8 +1,21 @@
-Playground for experimenting with deep learning on well-sized datasets.
-## Roadmap
-1. **Digits (sklearn)** – MLP baseline (done)
-2. **Fashion-MNIST** – MLP and CNN
-3. **CIFAR-10** – CNN experiments (PyTorch or TensorFlow)
-## Usage
+# DeepNets-Playground — Digits MLP Baseline
+
+This project trains a simple MLP (neural network) on scikit-learn's built-in **Digits** dataset.
+
+## How to run
+
+### Option A: Conda
 ```bash
+conda create -n deepnets python=3.11 -y
+conda activate deepnets
+pip install -r requirements.txt
 python scripts/run_digits_mlp.py
+
+## 📂 Project Structure
+
+- **scripts/** – contains runnable experiments (`run_digits_mlp.py`)
+- **data/** – placeholder for datasets
+- **outputs/** – results (plots + metrics JSON)
+- **notebooks/** – (optional) exploratory work
+- **requirements.txt** – dependencies
+- **README.md** – project description
