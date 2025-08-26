@@ -19,3 +19,7 @@ python scripts/run_digits_mlp.py
 - **notebooks/** – (optional) exploratory work
 - **requirements.txt** – dependencies
 - **README.md** – project description
+
+### Breast Cancer Pipeline
+A full data science lifecycle demo (Logistic Regression + Random Forest) on the Breast Cancer Wisconsin dataset.  
+Notebook: [01_pipeline_breast_cancer.ipynb](case_studies/ds_lifecycle/01_pipeline_breast_cancer.ipynb)
