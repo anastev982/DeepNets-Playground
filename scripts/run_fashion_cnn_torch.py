@@ -1,3 +1,6 @@
+#This script trains a small CNN on Fashion-MNIST using PyTorch, evaluates performance, and saves the model to disk.
+
+
 import torch, torch.nn as nn, torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms

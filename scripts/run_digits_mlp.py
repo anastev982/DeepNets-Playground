@@ -1,4 +1,5 @@
-# scripts/run_digits_mlp.py
+# This script trains an MLPClassifier on the Digits dataset using scikit-learn, evaluates with CV and test set, and saves results (confusion matrix, plots, metrics JSON).
+
 from sklearn.datasets import load_digits
 from sklearn.model_selection import train_test_split, StratifiedKFold, cross_val_score
 from sklearn.preprocessing import StandardScaler
