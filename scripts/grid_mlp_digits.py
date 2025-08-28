@@ -4,6 +4,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.pipeline import Pipeline
 from sklearn.neural_network import MLPClassifier
 import numpy as np
+from sklearn.metrics import classification_report, confusion_matrix, f1_score
 
 RNG = 42
 X, y = load_digits(return_X_y=True)
@@ -27,3 +28,16 @@ for h in candidates:
     if best is None or scores.mean() > best[0]:
         best = (scores.mean(), h)
 print(f"\nBEST: {best[1]} with CV f1_macro={best[0]:.3f}")
+
+# Final model with best architecture
+best_h = best[1]
+final_clf = Pipeline([("scaler", StandardScaler()),
+                      ("mlp", MLPClassifier(hidden_layer_sizes=best_h, max_iter=300, random_state=RNG))])
+# Fit on full train set
+final_clf.fit(Xtr, ytr)
+
+# Evaluate on test set
+yp = final_clf.predict(Xte)
+print("TEST f1_macro:", f1_score(yte, yp, average='macro'))
+print(classification_report(yte, yp))
+print(confusion_matrix(yte, yp))
