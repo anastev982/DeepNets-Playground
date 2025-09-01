@@ -22,17 +22,19 @@ Takeaway: Even simple, transparent m*odels can achieve excellent results when fe
 
 Confusion matrix provides detailed insight into per-class errors, which is crucial for model evaluation and interpretability.
 
+### Example Results
+
 **Confusion Matrix – Logistic Regression**  
-![Confusion Matrix - Logistic Regression](case_studies/ds_lifecycle/outputs/confusion_logreg.png)
+![Confusion Matrix - Logistic Regression](../ds_lifecycle/outputs/confusion_logreg.png)
 
 **Confusion Matrix – Random Forest**  
-![Confusion Matrix - Random Forest](case_studies/ds_lifecycle/outputs/confusion_rf.png)
+![Confusion Matrix - Random Forest](../ds_lifecycle/outputs/confusion_rf.png)
 
 **ROC Curve – Logistic Regression**  
-![ROC Curve - Logistic Regression](case_studies/ds_lifecycle/outputs/roc_logreg.png)
+![ROC Curve - Logistic Regression](../ds_lifecycle/outputs/roc_logreg.png)
 
 **ROC Curve – Random Forest**  
-![ROC Curve - Random Forest](case_studies/ds_lifecycle/outputs/roc_rf.png)
+![ROC Curve - Random Forest](../ds_lifecycle/outputs/roc_rf.png)
 
 2) AI / Deep Neural Network (Digits MLP)
 
