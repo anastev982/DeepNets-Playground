@@ -1,35 +1,22 @@
-# Big Data — Submission Guide
+ Big Data — Notebooks
 
-Ovo je uputstvo za pregled, bez potrebe da se kod izvršava.
+This folder contains the *code notebooks* for the Big Data project.  
+They complement the main pipeline by showing how different ML approaches were tested and compared.
 
-## Šta je ovde
-- **Glavni projekat**: kompletan kod je u root repozitorijumu.
-- **Ovaj dokument**: vodič za deo "Veliki podaci" (Dask, CSV→Parquet, spajanje, čišćenje).
+ Contents
 
-## Gde je relevantni kod (bez pokretanja)
-- Učitavanje i spajanje CSV/ZIP (Dask): `row_data.py`
-- Konverzija CSV → Parquet: `convert_to_parquet.py`
-- Centralni cleaning pipeline: `clean_data.py`
-- (Opcionalno) Notebook demonstracija: `big_data.ipynb`
+- *project2_sklearn_baseline.ipynb*
 
-> Napomena: Dataseti nisu uključeni zbog veličine. Kod je organizovan za rad sa višegigabajt­nim fajlovima (Pandas → Dask, Parquet za brži I/O).
+  A baseline workflow using **scikit-learn** (Logistic Regression, RandomForest).  
+  Purpose: provide a lightweight reference implementation on smaller data.
 
-## Ključne poruke (tl;dr)
-- **Scaling:** prešli smo sa Pandas na **Dask** da bismo obradili multi-GB setove.  
-- **Optimizacija:** **Parquet** format značajno ubrzava I/O i štedi RAM.  
-- **Modularnost:** odvojene skripte za učitavanje, spajanje, čišćenje i konverziju.  
+- *project2_spark_end_to_end.ipynb*
 
-## Ako želite da pokrenete
-Potrebne zavisnosti:
-Primer pokretanja (ako imate podatke):
-```bash
-# konverzija CSV → Parquet
-python convert_to_parquet.py data/raw_data/processed/merged_clean_data.csv
+  An end-to-end workflow using **PySpark MLlib** (Logistic Regression with parameter tuning and cross-validation).  
+  Purpose: demonstrate how to scale the same pipeline to big data.
 
-# čišćenje i spajanje
-python clean_data.py
+ Notes
 
-# notebook
-jupyter notebook big_data.ipynb
-
-
+- Input data is loaded from `data/raw_data/processed/`.
+- Results (CSV, plots) are saved in the `outputs/` folder.
+- Baseline vs Spark results can be directly compared to highlight scaling trade-offs.
