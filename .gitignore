@@ -4,3 +4,6 @@ echo ".virtual_documents/" >> .gitignore
 echo "notebooks/.ipynb_checkpoints/" >> .gitignore
 .virtual_documents/
 **/.ipynb_checkpoints/
+*.pyc
+__pycache__/
+.DS_Store

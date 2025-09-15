@@ -1,11 +1,14 @@
+This project shows a full ML workflow using scikit-learn and PySpark.
+With scikit-learn, I built a regression model (Ridge) with feature engineering, tuning, and evaluation (RMSE, R², residual plots, permutation importance).
+With PySpark, I turned the problem into a classification, added queries and feature engineering, and trained Logistic Regression with metrics like Accuracy, F1, ROC/AUC, and confusion matrix.
+The goal was to practice all steps of the ML lifecycle — from data exploration to model evaluation — in both Python and a big data framework.
+
 # DeepNets-Playground — Case Studies
 
 This repository contains several **small case studies** in data science and machine learning:
 - Digits MLP baseline (deep learning starter).
 - Breast Cancer pipeline (full DS lifecycle).
 - Sentiment Analysis (basic NLP workflow).
-
----
 
 ## Digits MLP Baseline
 
